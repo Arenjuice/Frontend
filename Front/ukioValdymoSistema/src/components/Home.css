@@ -1,0 +1,41 @@
+/* Bendra konteinerio stilistika */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Puslapis užpildomas pilnai */
+    
+    transition: background-color 0.3s ease-in-out; /* Pagrindinė animacija */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Paveikslėlio stiliai */
+  .main-image {
+    max-width: 100%; /* Paveikslėlis neišeina už konteinerio ribų */
+    height: auto; /* Automatinis aukščio reguliavimas */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Paveikslėlio animacijos */
+  }
+  
+  
+  /* Breakpoint'as atsako išdėstymui */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 20px; /* Mažesnis tarpas mažiems ekranams */
+    }
+  
+    .main-image {
+      max-width: 90%; /* Paveikslėlis sumažėja mažesniems ekranams */
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
